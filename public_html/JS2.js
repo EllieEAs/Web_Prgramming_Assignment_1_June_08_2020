@@ -16,50 +16,56 @@ var options = document.getElementById("options");
 
 
 // creating questions
+var choices = [
+    " Margaret Mitchell"," Margaret Mitchell", "Jane Austen","Charles Dickens",
+    "J. K. Rowling", "Jane Austen", " Margaret Mitchell","Emma Watson",
+    "Emma Watson", "Hattie McDaniel", "Jane Austen", "William Shakespeare",
+];
+var lables = [
+    "choiceA", "choiceB", "choiceC", "choiceD"
+];
+var answers = [
+    "choiceA",  "choiceA", "choice A"
+    
+];
+
 var questions = [
     {
         question: "The author of Gone with the wind? ",
-        choice1: " Margaret Mitchell",
-        choice2: "Hattie McDaniel",
-        choice3: "Jane Austen",
-        choice4: "Charles Dickens",
-        answer: 1
     },
     {
         question: "The author of Harry Potter?",
-        choice1: "J. K. Rowling",
-        choice2: "Jane Austen",
-        choice3: " Margaret Mitchell",
-        choice4: "Emma Watson",
-        answer: 1
     },
     {
         question: "The quthor of Sonnet 116?",
-        choice1: "William Shakespeare",
-        choice2: "Jane Austen",
-        choice3: "Hattie McDaniel",
-        choice4: "Emma Watson",
-        answer: 1
     }
 ];
 //new question function
 function newQuestion() {
     document.getElementById("question").innerHTML = questions[questionIndex].question;
     questions++;
-    document.getElementById("choice").innerHTML = questions[questionIndex].options;
-    options++;
-    score++;
+    for (var i =0; i < 4; i++){
+         document.getElementById(lables[i]).innerHTML = choices[i];
+         if (choices < ables.length){
+             choices++;
+         }else if (choices < lables.length)
+             choices++;
+         };
+}
+
+
+    //document.getElementById("choice1").value = questions[questionIndex].choice1;
+   
     
     //for (var i = 0; i < questions.length; i++) {
         //if (questionIndex < questions.length)
             //questions++;
     //}
-    }
 //checking answer
 function checkAnswer() {
 
     if (document.getElementById("choice1").checked === true) {
-        if (document.getElementById("choice1").value === answer[0]) {
+        if (document.getElementById("choice1").value === choiceA) {
             document.getElementById("choiceA").style.background = 'green';
             score++;
         } else {
