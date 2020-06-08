@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>QUIZ</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS.css">
+    </head>
+    <body style="text-align: center">
+        <div id="question"><p>what is 125 + 56?</p>
+            <div id="options">
+                <form id="choice">
+                    <input id="choice1" type="radio" value="181"  name="Choice">
+                    <label  id="choiceA">181</label><br>
+                    <input id="choice2" type="radio" value="176" name="Choice" >
+                    <label  id="choiceB">176 Granger</label><br>
+                    <input id="choice3" type="radio" value="187" name="Choice">
+                    <label  id="choiceC">187</label><br>
+                    <input id="choice4" type="radio" value="180" name="Choice">
+                    <label id="choiceD">180</label><br>
+                    <button id="next_button" onclick="newQuestion()">Next Question</button>
+                </form>
+            </div>
+            <div id="footer">
+                <button id="myBtn">Help</button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                          <span class="close">&times;</span>
+                        <p id="modal_msg">Game Instruction </p>
+                    </div>
+                </div>
+                <input id="restart_btn" type="reset" value="Reset" onclick="window.location.href='index.html'"><br>
+                <input id="score_btn" type="button" value="Score" onclick=""><br>
+            </div>
+        </div>
+        <script type="text/javascript" src="JS2.js"></script>
+    </body>
+</html>
