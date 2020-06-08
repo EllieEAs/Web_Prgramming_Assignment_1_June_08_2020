@@ -14,7 +14,6 @@ var questionIndex = 1;
 var answer;
 var options = document.getElementById("options");
 
-
 // creating questions
 var choices = [
     " Margaret Mitchell"," Margaret Mitchell", "Jane Austen","Charles Dickens",
@@ -67,17 +66,16 @@ function checkAnswer() {
     if (document.getElementById("choice1").checked === true) {
         if (document.getElementById("choice1").value === choiceA) {
             document.getElementById("choiceA").style.background = 'green';
+            questions++;
             score++;
         } else {
             alert("Please Enter correct answer!");
         }
     }
 }
-
-
 //reset button
 document.getElementById("restart_btn").addEventListener("click", function() {
-  alert("Question Reset!");
+  alert("Page Reset!");
 });
 //modal function
 var modal = document.getElementById("myModal");

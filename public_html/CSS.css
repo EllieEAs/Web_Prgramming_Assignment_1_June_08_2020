@@ -10,7 +10,8 @@ and open the template in the editor.
 
 
 body{
-    background-color: beige;
+    background-color: white;
+   
 
 }
 #footer{
@@ -169,5 +170,6 @@ body{
 }
 #modal_msg{
     color: black;
+    font-size: 12px;
 }
 
